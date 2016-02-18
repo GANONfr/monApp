@@ -1,0 +1,22 @@
+ <table >
+                
+    <thead>
+    <tr>
+        <th>Nom d'utilisateur</th>
+        
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(function(user) {%>
+            <tr>
+                <td><%= user.name %></td>
+                <td>
+                    <a href="/user/update/<%= user.id %>"><%= __('Modifier') %></a>
+                    &nbsp
+                    <a href="/user/destroy/<%= user.id %>"class="deleteUser"><%= __('Supprimer') %></a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
